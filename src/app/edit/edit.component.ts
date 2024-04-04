@@ -2,11 +2,14 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Person, SearchService } from '../shared';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-edit',
+  standalone: true,
+  imports: [FormsModule],
   templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.css']
+  styleUrl: './edit.component.css'
 })
 export class EditComponent implements OnInit, OnDestroy {
   person!: Person;
